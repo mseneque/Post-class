@@ -4,10 +4,13 @@ namespace StackOverflow_Post
 {
     public class Post
     {
+        // Valid state options
         public enum State { posted }
 
+        // Declarations
         private DateTime _dateCreated;
         private int _votes;
+        private State _state;
 
         // Getters and Setters
         public string Title { get; set; }
@@ -28,7 +31,8 @@ namespace StackOverflow_Post
         public Post()
         {
             _votes = 0;
-            DateCreated = DateCreated; 
+            DateCreated = DateCreated;
+            _state = State.posted;
         }
 
 
